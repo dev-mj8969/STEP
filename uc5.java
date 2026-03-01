@@ -1,17 +1,42 @@
 public class uc5 {
-    public static void main(String[] args) {
-        // Inline array initialization with String.join()
-        String[] lines = {
-            String.join("  ", " *** ", " *** ", "**** ", " ****"),
-            String.join("  ", "*   *", "*   *", "*   *", "*    "),
-            String.join("  ", "*   *", "*   *", "**** ", " *** "),
-            String.join("  ", "*   *", "*   *", "*    ", "    *"),
-            String.join("  ", " *** ", " *** ", "*    ", "**** ")
+    public static String[] getPatternO() {
+        return new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
         };
-
-        // Enhanced for loop to print banner
-        for (String line : lines) {
-            System.out.println(line);
-        }
     } 
+
+    public static String[] getPatternP() {
+        return new String[]{
+            "**** ",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    "
+        };
+    }
+
+    public static String[] getPatternS() {
+        return new String[]{
+            " ****",
+            "*    ",
+            " *** ",
+            "    *",
+            "**** "
+        };
+    }
+
+    public static void main(String[] args) {
+        String[] o1 = getPatternO();
+        String[] o2 = getPatternO();
+        String[] p  = getPatternP();
+        String[] s  = getPatternS();
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(o1[i] + "  " + o2[i] + "  " + p[i] + "  " + s[i]);
+        }
+    }
 }
