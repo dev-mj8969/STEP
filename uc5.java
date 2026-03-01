@@ -1,42 +1,17 @@
-public class uc5 {
-    public static String[] getPatternO() {
-        return new String[]{
-            " *** ",
-            "*   *",
-            "*   *",
-            "*   *",
-            " *** "
-        };
-    } 
-
-    public static String[] getPatternP() {
-        return new String[]{
-            "**** ",
-            "*   *",
-            "**** ",
-            "*    ",
-            "*    "
-        };
-    }
-
-    public static String[] getPatternS() {
-        return new String[]{
-            " ****",
-            "*    ",
-            " *** ",
-            "    *",
-            "**** "
-        };
-    }
-
+public class OOPSBannerApp {
     public static void main(String[] args) {
-        String[] o1 = getPatternO();
-        String[] o2 = getPatternO();
-        String[] p  = getPatternP();
-        String[] s  = getPatternS();
+        // Inline array initialization with String.join()
+        String[] lines = {
+            String.join("  ", " *** ", " *** ", "**** ", " ****"),
+            String.join("  ", "*   *", "*   *", "*   *", "*    "),
+            String.join("  ", "*   *", "*   *", "**** ", " *** "),
+            String.join("  ", "*   *", "*   *", "*    ", "    *"),
+            String.join("  ", " *** ", " *** ", "*    ", "**** ")
+        };
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(o1[i] + "  " + o2[i] + "  " + p[i] + "  " + s[i]);
+        // Enhanced for loop to print banner
+        for (String line : lines) {
+            System.out.println(line);
         }
-    }
+    } 
 }
